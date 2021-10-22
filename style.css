@@ -1,0 +1,452 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background: #080706;			
+}
+
+header, header .logo, .burger-button-label {
+    height: 50px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #B8C2CC;
+    z-index: 3;
+    transition: all .3s ease-in-out;
+}
+
+.page-holder {
+    width: 100%;
+    height: 100%;
+    background: #080706;			
+    padding-top: 50px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    
+}
+
+.main_intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main_intro_right a {
+	display: block;
+    width: 80%;
+    height: 100px;
+    background: #B8C2CC;
+    color: #080706;
+    margin: 10px auto;
+	text-decoration: none;
+	line-height: 100px;
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.main_intro_left {
+    color:#B8C2CC;
+    font-family: 'Roboto', sans-serif;
+    width: 45%;
+	height: fit-content;
+	margin: auto 0;
+}
+
+span.orange {
+    color:#E64A02;
+}
+
+span.orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.main_intro_mid {
+	margin: auto 0;
+	height: 50%;
+	background: #E64A02;
+	width: 4px;
+	max-width: 5%;
+	border-radius: 2px;
+}
+
+.main_intro_right {
+    color:#B8C2CC;
+    font-family: 'Roboto', sans-serif;
+    width: 45%;
+	height: fit-content;
+	margin: auto 0;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: #B8C2CC;
+    z-index: 2;
+	text-align: center;
+	line-height: 50px;
+	font-size: 11px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.burger-button {
+    display: none;
+}
+
+.burger-button:checked ~ header {
+    bottom: -50px;
+	height: 100%;
+}
+
+.burger-button:checked ~ header ul {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: .3s;
+}
+
+header .logo {
+    margin: 0 auto;
+    width: 500px;
+    background: none;
+    text-align: center;
+    line-height: 50px;
+    color: #E64A02;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+}
+
+header ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transition-delay: 0s;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100px;
+    height: fit-content;
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
+header ul a {
+	color: #E64A02;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.back-button {
+	display: block;
+	cursor: pointer;
+    position: absolute;
+	top: 0;
+	text-decoration: none;
+    z-index: 4;
+	
+	height: 50px;
+    width: 50px;
+	
+	color: #E64A02;
+	
+	font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+	
+    text-align: center;
+    line-height: 48px;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+	
+	transition: all .3s ease-in-out;
+	
+	font-family: 'Orbitron', sans-serif;
+}
+
+.burger-button-label {
+	cursor: pointer;
+    position: absolute;
+    z-index: 4;
+	
+	height: 50px;
+    width: 50px;
+	
+	font-weight: bold;
+    font-size: 32px;
+    font-family: sans-serif;
+	
+    text-align: center;
+    line-height: 50px;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+	
+	transition: all .3s ease-in-out;
+}
+
+.burger-button:checked + .burger-button-label {
+	transform: rotate(-45deg);
+}
+
+/* Meet Our Artists */
+
+.all_bio {
+	height: 100%;
+	width: 100%;
+    background-color: #080706;
+}
+
+.bio_element {
+    height: 33.33%;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+	padding-left: 1vw;
+	padding-right: 1vw;
+    box-sizing: border-box;
+}
+
+.bio_img {
+    height: 100%;
+    width: 20%;
+    background-size: cover;
+    background-position: top center;
+	float: left;
+}
+
+.bio_info {
+	width: 20%;
+	height: 100%;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	float: left;
+	color: #B8C2CC;
+	box-sizing: border-box;
+}
+
+.video {
+	height: 100%;
+	width: 15%;
+	
+	display: flex;
+	flex-direction: column;
+	
+	box-sizing: border-box;
+	float: left;
+}
+
+.video iframe {
+	margin-top: auto;
+	height: 70%;
+	border: 2px solid #B8C2CC;
+}
+
+.bio_info p {
+	font-size: 12px;
+}
+
+.bio_info h1 {
+	margin: 0;
+	padding: 0;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.yoga_gif {
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 150px;
+	height: 181px;
+	margin: 0 auto;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.yoga_gif:hover h3 {
+	opacity: 0;
+}
+
+.yoga_gif h3 {
+	font-family: 'Orbitron', sans-serif;
+    color: #080706;
+    transform: rotate(-45deg);
+    line-height: 170px;
+    position: absolute;
+    font-size: 24px;
+    transition: all .75s ease-in-out;
+	padding-left: 48px;
+}
+
+.yoga_gif div {
+	background-color: #B8C2CC;
+    height: 100%;
+    width: 100%;
+    transition: all .75s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.yoga_gif audio {
+	opacity: 0;
+    transition: all .75s ease-in-out;
+    width: 95%;
+    height: 30px;
+    margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.yoga_gif:hover audio {
+	opacity: 1;
+}
+
+.yoga_gif:hover div {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+/* TAROT */
+/* Grid for the cards */
+.tarot_container {
+	width: 100%;
+	min-height: 500px;
+	margin-top: auto;
+	margin-bottom: auto;
+    display: grid;
+	grid-template-columns: 30% 30% 30%;
+    grid-template-rows: min(48%, 300px) min(48%, 300px);
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+  
+  /* style of the cards */
+  
+  
+  .tarot_info {
+	   padding-top: 50px;
+	   padding-bottom: 50px;
+	   color: #B8C2CC;
+       line-height: 26px;
+	   max-width: 800px;
+	   margin: 0 auto;
+	   text-align: center;		   
+		padding-left: 15px;
+		padding-right: 15px;
+  }
+  
+  .tarot_info p {
+	  margin: 0;
+  }
+  
+  .tarot_container_outer {
+	max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .tarot_container .item {
+    background-color: #B8C2CC;
+    background-image: linear-gradient(130deg, #ED6A2D 0%, #E64A02 85%, #D94804 100%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    color: #fff;
+    border-radius: 4px;
+    border: 6px solid #171717;
+    width: 100%;
+  }
+  
+  .tarot_container .item a {
+	  display: flex;
+	  flex-direction: columns;
+	  height: 100%;
+	  width: 100%;
+	  text-decoration: none;
+	  color: #080706;
+	  font-family: 'Orbitron', sans-serif;
+	  font-size: 18px;
+  }
+  
+  .tarot_container .item a div {
+	  margin: auto;
+	  text-align: center;
+  }
+  
+  /* APPLE */
+ 
+  .apple_body {
+ background-color:#080706;
+ color:#B8C2CC;
+ align-items: center;
+ display: flex;
+ justify-content: space-around;
+
+  }
+
+  .apple_img {
+      width: 30%;
+  }
+
+  .apple_heading {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .apple_heading2 {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .apple_txt{
+    font-family: 'Roboto', sans-serif;
+    
+  }
+
+
+  /* YOGA */
+
+  .yoga_body {
+	  padding-top: 50px;
+      background-color: #080706;
+      color: #B8C2CC;
+      text-align: center;
+  }
+
+  .tadasana_instructions {
+      width: 1000px;
+      text-align: center;
+      padding-left: 17%;
+  }
+  
+  .bio_body {
+	  padding-top: 50px;
+  }
+  
+  .tarot_body {
+	  background-color:#080706;
+	  padding-top: 15px;
+  }
+  
+  .yoga_body h1, .yoga_body h2 {
+	font-family: 'Orbitron', sans-serif;
+    color:#E64A02;
+  }
+  
